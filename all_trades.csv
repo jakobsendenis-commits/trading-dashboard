@@ -1,0 +1,22 @@
+coin,timestamp,trade_type,signal,price,qty,value_usd,profit_usd,profit_pct,indicator,notes
+JASMY,2025-11-19 17:39:58,PARTIAL_TP,Sell,0.008,1475,11.76,0.23,15.54,Lorentzian Bot,TP1 - 15.0% exit
+JASMY,2025-11-19 17:39:58,PARTIAL_TP,Sell,0.008,2893,23.07,0.46,15.54,Lorentzian Bot,TP2 - 25.0% exit
+JASMY,2025-11-19 17:42:01,PARTIAL_TP,Sell,0.008,820,6.55,0.12,14.85,Lorentzian Bot,TP1 - 15.0% exit
+JASMY,2025-11-19 17:43:37,PARTIAL_TP,Sell,0.008,1367,10.91,0.21,15.05,Lorentzian Bot,TP2 - 25.0% exit
+AERO,2025-11-19 17:48:42,PARTIAL_TP,Sell,0.7675,46,35.3,0.47,10.57,Lorentzian Bot,TP1 - 15.0% exit
+AERO,2025-11-19 18:04:11,PARTIAL_TP,Sell,0.7625,77,58.71,1.18,15.71,Lorentzian Bot,TP2 - 25.0% exit
+JASMY,2025-11-19 18:04:57,PARTIAL_TP,Sell,0.0078,2188,17.12,0.68,30.49,Lorentzian Bot,TP3 - 40.0% exit
+AERO,2025-11-19 18:52:04,EXIT,SELL,0.761,185.0,140.78,3.04,17.26,Lorentzian Bot,Stop Loss ramt (automatisk lukket af Bybit)
+AERO,2025-11-19 19:03:08,EXIT,SELL,0.7594,185.0,140.49,3.32,18.9,Lorentzian Bot,Stop Loss ramt (automatisk lukket af Bybit)
+JASMY,2025-11-19 19:03:08,EXIT,SELL,0.0078,1095.0,8.49,0.4,37.48,Lorentzian Bot,Stop Loss ramt (automatisk lukket af Bybit)
+AERO,2025-11-19 19:13:51,EXIT,SELL,0.7669,185.0,141.88,1.98,11.19,Lorentzian Bot,Stop Loss ramt (automatisk lukket af Bybit)
+JASMY,2025-11-19 19:13:52,EXIT,SELL,0.0078,1095.0,8.57,0.32,30.1,Lorentzian Bot,Stop Loss ramt (automatisk lukket af Bybit)
+JASMY,2025-11-19 19:28:36,EXIT,SELL,0.0077,1095.0,8.44,0.44,42.0,Lorentzian Bot,Stop Loss ramt (automatisk lukket af Bybit)
+AERO,2025-11-19 19:34:05,EXIT,SELL,0.7543,70.0,52.8,1.59,24.15,Lorentzian Bot,Stop Loss ramt (automatisk lukket af Bybit)
+ETH,2025-11-19 22:12:20,ENTRY,LONG,2948.26,0.05,147.41,,,ETH MA Bot,"SL: 2830.33, Leverage: 8x"
+AERO,2025-11-19 22:12:23,ENTRY,LONG,0.7802,307,239.52,,,Lorentzian Bot,"SL: 0.749, Leverage: 8x"
+ADA,2025-11-19 22:12:26,ENTRY,LONG,0.4502,888,399.78,,,Lorentzian Bot,"SL: 0.4322, Leverage: 8x"
+AVAX,2025-11-19 22:12:28,ENTRY,LONG,14.075,28.4,399.73,,,Lorentzian Bot,"SL: 13.512, Leverage: 8x"
+TIA,2025-11-19 22:12:31,ENTRY,LONG,0.74,540,399.92,,,TIA MA Bot,"SL: 0.71, Leverage: 8x"
+JASMY,2025-11-19 22:12:34,ENTRY,LONG,0.0078,30888,240.0,,,Lorentzian Bot,"SL: 0.0075, Leverage: 8x"
+POPCAT,2025-11-19 22:12:37,ENTRY,LONG,0.1036,2316,239.94,,,Lorentzian Bot,"SL: 0.0995, Leverage: 8x"
