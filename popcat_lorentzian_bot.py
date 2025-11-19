@@ -20,7 +20,7 @@ TESTNET = False  # False = LIVE MODE
 # Trading indstillinger
 SYMBOL = "POPCATUSDT"
 LEVERAGE = 8
-POSITION_SIZE_USDT = 30
+POSITION_SIZE_USDT = 50
 STOP_LOSS_PERCENT = 4.0
 TAKE_PROFIT_PERCENT = 0  # Ingen TP - holder til næste signal
 
@@ -152,12 +152,12 @@ def check_partial_tp():
             
             if profit_pct >= tp_level["profit_pct"]:
                 original_size = size / (1 - sum([tp["sell_pct"] for tp in TP_LEVELS if tp["name"] in tp_levels_hit[position_id]]))
-                partial_size = round(original_size * tp_level["sell_pct"], 1)
+                partial_size = int(original_size * tp_level["sell_pct"])
                 
-                if partial_size > size:
-                    partial_size = size
+                if partial_size > int(size):
+                    partial_size = int(size)
                 
-                if partial_size < 0.1:
+                if partial_size < 1:
                     log(f"⚠️ {tp_name} size for lille ({partial_size}), springer over")
                     continue
                 

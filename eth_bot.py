@@ -21,7 +21,7 @@ TESTNET = False  # False = LIVE MODE (rigtige penge!)
 # Trading indstillinger
 SYMBOL = "ETHUSDT"
 LEVERAGE = 8  # Gearing (1-100x)
-POSITION_SIZE_USDT = 150  # Hvor mange USDT per trade
+POSITION_SIZE_USDT = 150
 STOP_LOSS_PERCENT = 4.0  # Stop loss i procent
 TAKE_PROFIT_PERCENT = 0  # Ingen TP - holder til næste signal
 
@@ -176,8 +176,8 @@ def check_partial_tp():
                 partial_size = round(original_size * tp_level["sell_pct"], 3)
                 
                 # Sikr vi ikke sælger mere end vi har
-                if partial_size > size:
-                    partial_size = size
+                if partial_size > int(size):
+                    partial_size = int(size)
                 
                 if partial_size < 0.01:
                     log(f"⚠️ {tp_name} size for lille ({partial_size}), springer over")
