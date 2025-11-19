@@ -41,7 +41,7 @@ last_known_position = {
 }
 
 # CSV log fil
-TRADE_LOG_FILE = os.path.expanduser("~/Desktop/all_trades.csv")
+TRADE_LOG_FILE = os.path.expanduser("~/Desktop/bot/all_trades.csv")
 
 # ====== WEBHOOK SERVER ======
 app = Flask(__name__)
