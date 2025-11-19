@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Trading Dashboard</title>
+    <title>HrMuKi trade</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
@@ -279,6 +279,12 @@
             justify-content: center;
         }
 
+        .coin-logo img {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+
         .coin-logo svg {
             width: 100%;
             height: 100%;
@@ -382,8 +388,7 @@
 
         .chart-wrapper {
             position: relative;
-            flex: 1;
-            min-height: 0;
+            height: 400px;
         }
 
         .chart-wrapper canvas {
@@ -433,7 +438,7 @@
                 <span>BYB</span><span class="orange">I</span><span>T</span>
             </div>
             <div class="title-section">
-                <h1>MrMuKi Trading</h1>
+                <h1>HrMuKi trade</h1>
                 <p>Real-time trading performance tracker</p>
             </div>
         </div>
@@ -500,14 +505,39 @@
                     <h3>📊 Månedlig Profit per Coin</h3>
                     <div class="custom-legend">
                         <div class="legend-item">
-                            <div class="coin-logo" id="ethLegendLogo"></div>
+                            <div class="coin-logo"><img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" style="width:24px;height:24px;"></div>
                             <div class="color-box" style="background: rgba(98, 126, 234, 0.8);"></div>
                             <span>ETH</span>
                         </div>
                         <div class="legend-item">
-                            <div class="coin-logo" id="btcLegendLogo"></div>
-                            <div class="color-box" style="background: rgba(247, 147, 26, 0.8);"></div>
-                            <span>BTC</span>
+                            <div class="coin-logo"><img src="https://cryptologos.cc/logos/avalanche-avax-logo.png" style="width:24px;height:24px;"></div>
+                            <div class="color-box" style="background: rgba(232, 65, 66, 0.8);"></div>
+                            <span>AVAX</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="coin-logo"><img src="https://cryptologos.cc/logos/cardano-ada-logo.png" style="width:24px;height:24px;"></div>
+                            <div class="color-box" style="background: rgba(0, 51, 173, 0.8);"></div>
+                            <span>ADA</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="coin-logo"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/29270.png" style="width:24px;height:24px;"></div>
+                            <div class="color-box" style="background: rgba(139, 92, 246, 0.8);"></div>
+                            <span>AERO</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="coin-logo"><img src="https://cryptologos.cc/logos/celestia-tia-logo.png" style="width:24px;height:24px;"></div>
+                            <div class="color-box" style="background: rgba(124, 58, 237, 0.8);"></div>
+                            <span>TIA</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="coin-logo"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/28782.png" style="width:24px;height:24px;"></div>
+                            <div class="color-box" style="background: rgba(236, 72, 153, 0.8);"></div>
+                            <span>POPCAT</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="coin-logo"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/8425.png" style="width:24px;height:24px;"></div>
+                            <div class="color-box" style="background: rgba(34, 197, 94, 0.8);"></div>
+                            <span>JASMY</span>
                         </div>
                     </div>
                     <div class="chart-wrapper">
@@ -516,7 +546,7 @@
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 12px;">
                 <div class="chart-container" style="height: 250px; margin-top: 0;">
                     <h3>🍩 Trade Distribution</h3>
                     <div class="chart-wrapper">
@@ -717,12 +747,16 @@
         }
 
         function getCoinLogo(coin) {
-            if (coin === 'ETH') {
-                return '<svg viewBox="0 0 256 417" xmlns="http://www.w3.org/2000/svg"><path d="M127.961 0l-2.795 9.5v275.668l2.795 2.79 127.962-75.638z" fill="#343434"/><path d="M127.962 0L0 212.32l127.962 75.639V154.158z" fill="#8C8C8C"/><path d="M127.961 312.187l-1.575 1.92v98.199l1.575 4.6L256 236.587z" fill="#3C3C3B"/><path d="M127.962 416.905v-104.72L0 236.585z" fill="#8C8C8C"/><path d="M127.961 287.958l127.96-75.637-127.96-58.162z" fill="#141414"/><path d="M0 212.32l127.96 75.638v-133.8z" fill="#393939"/></svg>';
-            } else if (coin === 'BTC') {
-                return '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#F7931A"/><path fill="#FFF" fill-rule="nonzero" d="M23.189 14.02c.314-2.096-1.283-3.223-3.465-3.975l.708-2.84-1.728-.43-.69 2.765c-.454-.114-.92-.22-1.385-.326l.695-2.783L15.596 6l-.708 2.839c-.376-.086-.746-.17-1.104-.26l.002-.009-2.384-.595-.46 1.846s1.283.294 1.256.312c.7.175.826.638.805 1.006l-.806 3.235c.048.012.11.03.18.057l-.183-.045-1.13 4.532c-.086.212-.303.531-.793.41.018.025-1.256-.313-1.256-.313l-.858 1.978 2.25.561c.418.105.828.215 1.231.318l-.715 2.872 1.727.43.708-2.84c.472.127.93.245 1.378.357l-.706 2.828 1.728.43.715-2.866c2.948.558 5.164.333 6.097-2.333.752-2.146-.037-3.385-1.588-4.192 1.13-.26 1.98-1.003 2.207-2.538zm-3.95 5.538c-.533 2.147-4.148.986-5.32.695l.95-3.805c1.172.293 4.929.872 4.37 3.11zm.535-5.569c-.487 1.953-3.495.96-4.47.717l.86-3.45c.975.243 4.118.696 3.61 2.733z"/></g></svg>';
-            }
-            return '';
+            const logos = {
+                'ETH': '<img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" style="width:20px;height:20px;">',
+                'AVAX': '<img src="https://cryptologos.cc/logos/avalanche-avax-logo.png" style="width:20px;height:20px;">',
+                'ADA': '<img src="https://cryptologos.cc/logos/cardano-ada-logo.png" style="width:20px;height:20px;">',
+                'AERO': '<img src="https://s2.coinmarketcap.com/static/img/coins/64x64/29270.png" style="width:20px;height:20px;">',
+                'TIA': '<img src="https://cryptologos.cc/logos/celestia-tia-logo.png" style="width:20px;height:20px;">',
+                'POPCAT': '<img src="https://s2.coinmarketcap.com/static/img/coins/64x64/28782.png" style="width:20px;height:20px;">',
+                'JASMY': '<img src="https://s2.coinmarketcap.com/static/img/coins/64x64/8425.png" style="width:20px;height:20px;">'
+            };
+            return logos[coin] || '';
         }
 
         function updateProfitChart() {
@@ -738,7 +772,7 @@
                     var coin = trade.coin;
                     
                     if (!monthlyData[month]) {
-                        monthlyData[month] = { ETH: 0, BTC: 0 };
+                        monthlyData[month] = { ETH: 0, AVAX: 0, ADA: 0, AERO: 0, TIA: 0, POPCAT: 0, JASMY: 0 };
                     }
                     if (!monthlyData[month][coin]) {
                         monthlyData[month][coin] = 0;
@@ -747,9 +781,7 @@
                 }
             });
             
-            document.getElementById('ethLegendLogo').innerHTML = getCoinLogo('ETH');
-            document.getElementById('btcLegendLogo').innerHTML = getCoinLogo('BTC');
-            
+                                    
             var now = new Date();
             var currentYear = now.getFullYear();
             var currentMonth = now.getMonth(); // 0-11
@@ -757,9 +789,14 @@
             
             var labels = [];
             var ethData = [];
-            var btcData = [];
+            var avaxData = [];
+            var adaData = [];
+            var aeroData = [];
+            var tiaData = [];
+            var popcatData = [];
+            var jasmyData = [];
             
-            // Start from current month and go 12 months forward
+            // Show current month + next 11 months
             for (var i = 0; i < 12; i++) {
                 var monthIndex = (currentMonth + i) % 12;
                 var year = currentYear + Math.floor((currentMonth + i) / 12);
@@ -774,10 +811,20 @@
                 
                 if (monthlyData[monthKey]) {
                     ethData.push(monthlyData[monthKey].ETH || 0);
-                    btcData.push(monthlyData[monthKey].BTC || 0);
+                    avaxData.push(monthlyData[monthKey].AVAX || 0);
+                    adaData.push(monthlyData[monthKey].ADA || 0);
+                    aeroData.push(monthlyData[monthKey].AERO || 0);
+                    tiaData.push(monthlyData[monthKey].TIA || 0);
+                    popcatData.push(monthlyData[monthKey].POPCAT || 0);
+                    jasmyData.push(monthlyData[monthKey].JASMY || 0);
                 } else {
                     ethData.push(0);
-                    btcData.push(0);
+                    avaxData.push(0);
+                    adaData.push(0);
+                    aeroData.push(0);
+                    tiaData.push(0);
+                    popcatData.push(0);
+                    jasmyData.push(0);
                 }
             }
             
@@ -789,26 +836,108 @@
                 profitChart.destroy();
             }
             
+            // Add 3D shadow plugin
+            const shadowPlugin = {
+                id: 'customShadow',
+                beforeDatasetsDraw: function(chart) {
+                    const ctx = chart.ctx;
+                    ctx.save();
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+                    ctx.shadowBlur = 10;
+                    ctx.shadowOffsetX = 3;
+                    ctx.shadowOffsetY = 3;
+                }
+            };
+            
             profitChart = new Chart(ctx, {
                 type: 'bar',
+                plugins: [shadowPlugin],
                 data: {
                     labels: labels,
                     datasets: [
                         {
                             label: 'ETH',
                             data: ethData,
-                            backgroundColor: 'rgba(98, 126, 234, 0.8)',
+                            backgroundColor: 'rgba(98, 126, 234, 0.9)',
                             borderColor: '#627eea',
                             borderWidth: 2,
-                            borderRadius: 6
+                            borderRadius: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
                         },
                         {
-                            label: 'BTC',
-                            data: btcData,
-                            backgroundColor: 'rgba(247, 147, 26, 0.8)',
-                            borderColor: '#f7931a',
+                            label: 'AVAX',
+                            data: avaxData,
+                            backgroundColor: 'rgba(232, 65, 66, 0.9)',
+                            borderColor: '#e84142',
                             borderWidth: 2,
-                            borderRadius: 6
+                            borderRadius: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        {
+                            label: 'ADA',
+                            data: adaData,
+                            backgroundColor: 'rgba(0, 51, 173, 0.9)',
+                            borderColor: '#0033ad',
+                            borderWidth: 2,
+                            borderRadius: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        {
+                            label: 'AERO',
+                            data: aeroData,
+                            backgroundColor: 'rgba(139, 92, 246, 0.9)',
+                            borderColor: '#8b5cf6',
+                            borderWidth: 2,
+                            borderRadius: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        {
+                            label: 'TIA',
+                            data: tiaData,
+                            backgroundColor: 'rgba(124, 58, 237, 0.9)',
+                            borderColor: '#7c3aed',
+                            borderWidth: 2,
+                            borderRadius: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        {
+                            label: 'POPCAT',
+                            data: popcatData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.9)',
+                            borderColor: '#ec4899',
+                            borderWidth: 2,
+                            borderRadius: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        {
+                            label: 'JASMY',
+                            data: jasmyData,
+                            backgroundColor: 'rgba(34, 197, 94, 0.9)',
+                            borderColor: '#22c55e',
+                            borderWidth: 2,
+                            borderRadius: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
                         }
                     ]
                 },
@@ -895,8 +1024,21 @@
                 distributionChart.destroy();
             }
             
+            const shadowPlugin2 = {
+                id: 'customShadow2',
+                beforeDatasetsDraw: function(chart) {
+                    const ctx = chart.ctx;
+                    ctx.save();
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+                    ctx.shadowBlur = 15;
+                    ctx.shadowOffsetX = 4;
+                    ctx.shadowOffsetY = 4;
+                }
+            };
+            
             distributionChart = new Chart(ctx, {
                 type: 'doughnut',
+                plugins: [shadowPlugin2],
                 data: {
                     labels: Object.keys(distribution),
                     datasets: [{
@@ -981,8 +1123,21 @@
                 indicatorChart.destroy();
             }
             
+            const shadowPlugin3 = {
+                id: 'customShadow3',
+                beforeDatasetsDraw: function(chart) {
+                    const ctx = chart.ctx;
+                    ctx.save();
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+                    ctx.shadowBlur = 10;
+                    ctx.shadowOffsetX = 3;
+                    ctx.shadowOffsetY = 3;
+                }
+            };
+            
             indicatorChart = new Chart(ctx, {
                 type: 'bar',
+                plugins: [shadowPlugin3],
                 data: {
                     labels: labels,
                     datasets: [{
@@ -991,7 +1146,7 @@
                         backgroundColor: colors,
                         borderColor: colors.map(c => c.replace('0.8', '1')),
                         borderWidth: 2,
-                        borderRadius: 6
+                        borderRadius: 8
                     }]
                 },
                 options: {
@@ -1079,7 +1234,9 @@
                 
                 var logo = document.createElement('div');
                 logo.className = 'coin-logo';
-                logo.innerHTML = getCoinLogo(trade.coin);
+                var logoHtml = getCoinLogo(trade.coin);
+                console.log('Coin:', trade.coin, 'Logo HTML:', logoHtml);
+                logo.innerHTML = logoHtml;
                 
                 var coinText = document.createElement('span');
                 coinText.textContent = trade.coin || '-';
